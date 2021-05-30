@@ -1,15 +1,13 @@
-package com.lb.leetcode.linkedlist.reverseList;
-
-import javax.xml.soap.Node;
+package com.lb.leetcode.linkedlist;
 
 /**
  * @author liuben
  * @date 2021/5/29 7:32 下午
  **/
 public class ListNode {
-    private int val;
+    public int val;
 
-    private ListNode next;
+    public ListNode next;
 
     public int getVal() {
         return val;
@@ -82,5 +80,10 @@ public class ListNode {
         ListNode node2 = new ListNode(2, node3);
         ListNode node1 = new ListNode(1, node2);
         ListNode.reverseList(node1);
+    }
+
+    @Override
+    public String toString() {
+        return val + "," + next;
     }
 }
