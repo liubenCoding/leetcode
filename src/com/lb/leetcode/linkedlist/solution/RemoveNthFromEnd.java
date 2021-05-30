@@ -1,4 +1,4 @@
-package com.lb.leetcode.linkedlist;
+package com.lb.leetcode.linkedlist.solution;
 
 //给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。
 //
@@ -42,6 +42,8 @@ package com.lb.leetcode.linkedlist;
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
+
+import com.lb.leetcode.linkedlist.ListNode;
 
 /**
  * Definition for singly-linked list.

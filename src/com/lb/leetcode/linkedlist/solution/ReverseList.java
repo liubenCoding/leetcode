@@ -1,4 +1,6 @@
-package com.lb.leetcode.linkedlist;
+package com.lb.leetcode.linkedlist.solution;
+
+import com.lb.leetcode.linkedlist.ListNode;
 
 /**
  * @author liuben
@@ -40,10 +42,10 @@ public class ReverseList {
             return newHead;
         }
 
-        public static void main(String[] args) {
-            ListNode node3 = new ListNode(3);
-            ListNode node2 = new ListNode(2, node3);
-            ListNode node1 = new ListNode(1, node2);
-            ListNode.reverseList(node1);
-        }
+    public static void main(String[] args) {
+        ListNode node3 = new ListNode(3);
+        ListNode node2 = new ListNode(2, node3);
+        ListNode node1 = new ListNode(1, node2);
+        ListNode.reverseList(node1);
+    }
 }
