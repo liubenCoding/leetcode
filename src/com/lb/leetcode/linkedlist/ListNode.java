@@ -82,8 +82,8 @@ public class ListNode {
         ListNode.reverseList(node1);
     }
 
-    @Override
-    public String toString() {
-        return val + "," + next;
-    }
+    //@Override
+    //public String toString() {
+    //    return val + "," + next;
+    //}
 }
