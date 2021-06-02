@@ -1,7 +1,7 @@
 package com.lb.leetcode.linkedlist.solution;
 
 import com.lb.leetcode.linkedlist.ListNode;
-//存在一个按升序排列的链表，给你这个链表的头节点 head ，请你删除链表中所有存在数字重复情况的节点，只保留原始链表中 没有重复出现 的数字。
+//存在一个按升序排列的链表，给你这个链表的头节点 head ，请你删除所有重复的元素，使每个元素 只出现一次 。
 //
 // 返回同样按升序排列的结果链表。
 //
@@ -10,15 +10,15 @@ import com.lb.leetcode.linkedlist.ListNode;
 // 示例 1：
 //
 //
-//输入：head = [1,2,3,3,4,4,5]
-//输出：[1,2,5]
+//输入：head = [1,1,2]
+//输出：[1,2]
 //
 //
 // 示例 2：
 //
 //
-//输入：head = [1,1,1,2,3]
-//输出：[2,3]
+//输入：head = [1,1,2,3,3]
+//输出：[1,2,3]
 //
 //
 //
@@ -45,8 +45,9 @@ public class DeleteDuplicates {
         while (head != null && head.next != null) {
             if (head.val == head.next.val) {
                 head.next = head.next.next;
+            }else{
+                head = head.next;
             }
-            head = head.next;
         }
         return dummy;
     }
