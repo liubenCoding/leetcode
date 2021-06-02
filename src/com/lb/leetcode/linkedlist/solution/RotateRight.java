@@ -80,7 +80,7 @@ public class RotateRight {
         ListNode node3 = new ListNode(2);
         ListNode node2 = new ListNode(1, node3);
         ListNode node1 = new ListNode(0, node2);
-        ListNode listNode = RotateRight.rotateRight(node1, 4);
+        ListNode listNode = RotateRight.rotateRight(node1, 7);
         System.out.println(listNode);
     }
 }
