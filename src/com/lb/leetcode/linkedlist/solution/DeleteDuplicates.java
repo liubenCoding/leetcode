@@ -31,25 +31,32 @@ import com.lb.leetcode.linkedlist.ListNode;
 // 题目数据保证链表已经按升序排列
 //
 // Related Topics 链表
-
-/**
- * @author: liuben
- * @date: 2021/6/2
- */
+// 👍 579 👎 0
 public class DeleteDuplicates {
+//    public static ListNode deleteDuplicates(ListNode head) {
+//        if (head == null || head.next == null) {
+//            return head;
+//        }
+//        ListNode dummy = head;
+//        while (head != null && head.next != null) {
+//            if (head.val == head.next.val) {
+//                head.next = head.next.next;
+//            }else{
+//                head = head.next;
+//            }
+//        }
+//        return dummy;
+//    }
+
     public static ListNode deleteDuplicates(ListNode head) {
         if (head == null || head.next == null) {
             return head;
         }
-        ListNode dummy = head;
-        while (head != null && head.next != null) {
-            if (head.val == head.next.val) {
-                head.next = head.next.next;
-            }else{
-                head = head.next;
-            }
+        head.next = deleteDuplicates(head.next);
+        if (head.val == head.next.val) {
+            return head.next;
         }
-        return dummy;
+        return head;
     }
 
     public static void main(String[] args) {

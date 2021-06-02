@@ -35,6 +35,7 @@ import com.lb.leetcode.linkedlist.ListNode;
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -45,44 +46,33 @@ import com.lb.leetcode.linkedlist.ListNode;
  * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-
-/**
- * @author: liuben
- * @date: 2021/6/2
- */
 public class DeleteDuplicates2 {
-//    public static ListNode deleteDuplicates(ListNode head) {
-//        if (head == null || head.next == null) {
-//            return head;
-//        }
-//        ListNode dummy = head;
-//        while (head != null && head.next != null) {
-//            if (head.val == head.next.val) {
-//                head.next = head.next.next;
-//            }else{
-//                head = head.next;
-//            }
-//        }
-//        return dummy;
-//    }
-
     public static ListNode deleteDuplicates(ListNode head) {
-        if (head == null || head.next == null) {
-            return head;
+        ListNode dummy = new ListNode();
+        ListNode dummyHead = dummy;
+        // Set<Integer> duplicateVals = new HashSet<>();
+        int duplicateVal = -101;
+        while (head != null) {
+            // if ((head.next != null && head.val == head.next.val) || duplicateVals.contains(head.val)) {
+            if ((head.next != null && head.val == head.next.val) || duplicateVal == head.val) {
+                // duplicateVals.add(head.val);
+                duplicateVal = head.val;
+            } else {
+                dummy.next = new ListNode();
+                dummy.next.val = head.val;
+                dummy = dummy.next;
+            }
+            head = head.next;
         }
-        head.next = deleteDuplicates(head.next);
-        if (head.val == head.next.val) {
-            return head.next;
-        }
-        return head;
+        return dummyHead.next;
     }
 
     public static void main(String[] args) {
-        ListNode node7 = new ListNode(4);
-        ListNode node6 = new ListNode(3, node7);
-        ListNode node5 = new ListNode(3, node6);
-        ListNode node4 = new ListNode(3, node5);
-        ListNode node3 = new ListNode(2, node4);
+//        ListNode node7 = new ListNode(4);
+//        ListNode node6 = new ListNode(3, node7);
+//        ListNode node5 = new ListNode(3, node6);
+//        ListNode node4 = new ListNode(3, node5);
+        ListNode node3 = new ListNode(2);
         ListNode node2 = new ListNode(2, node3);
         ListNode node1 = new ListNode(1, node2);
         ListNode listNode = DeleteDuplicates2.deleteDuplicates(node1);
