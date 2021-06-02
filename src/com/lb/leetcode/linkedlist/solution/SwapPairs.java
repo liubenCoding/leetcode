@@ -28,7 +28,6 @@ public class SwapPairs {
     /**
      * 迭代法
      *
-     * @param args
      */
     //public static ListNode swapPairs(ListNode head) {
     //    ListNode dummy = new ListNode();
