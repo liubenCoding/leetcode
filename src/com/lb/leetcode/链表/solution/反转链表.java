@@ -1,12 +1,12 @@
-package com.lb.leetcode.linkedlist.solution;
+package com.lb.leetcode.链表.solution;
 
-import com.lb.leetcode.linkedlist.ListNode;
+import com.lb.leetcode.链表.ListNode;
 
 /**
  * @author liuben
  * @date 2021/5/30 12:31 下午
  **/
-public class ReverseList {
+public class 反转链表 {
     //    public static ListNode reverseList(ListNode node) {
 //        ListNode reversedList = null;
 //        ListNode next = null;

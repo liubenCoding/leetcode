@@ -1,12 +1,12 @@
-package com.lb.leetcode.linkedlist.solution;
+package com.lb.leetcode.链表.solution;
 
-import com.lb.leetcode.linkedlist.ListNode;
+import com.lb.leetcode.链表.ListNode;
 
 /**
  * @author: liuben
  * @date: 2021/6/2
  */
-public class AddTwoNumbers {
+public class 两数相加 {
 
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode();
@@ -45,7 +45,7 @@ public class AddTwoNumbers {
         ListNode nodeb = new ListNode(9, nodec);
         ListNode nodea = new ListNode(9, nodeb);
 
-        ListNode listNode = AddTwoNumbers.addTwoNumbers(node1, nodea);
+        ListNode listNode = 两数相加.addTwoNumbers(node1, nodea);
         System.out.println(listNode);
     }
 

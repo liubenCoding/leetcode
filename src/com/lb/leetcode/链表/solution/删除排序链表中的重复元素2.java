@@ -1,6 +1,6 @@
-package com.lb.leetcode.linkedlist.solution;
+package com.lb.leetcode.链表.solution;
 
-import com.lb.leetcode.linkedlist.ListNode;
+import com.lb.leetcode.链表.ListNode;
 //存在一个按升序排列的链表，给你这个链表的头节点 head ，请你删除链表中所有存在数字重复情况的节点，只保留原始链表中 没有重复出现 的数字。
 //
 // 返回同样按升序排列的结果链表。
@@ -46,7 +46,7 @@ import com.lb.leetcode.linkedlist.ListNode;
  * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-public class DeleteDuplicates2 {
+public class 删除排序链表中的重复元素2 {
     public static ListNode deleteDuplicates(ListNode head) {
         ListNode dummy = new ListNode();
         ListNode dummyHead = dummy;
@@ -75,7 +75,7 @@ public class DeleteDuplicates2 {
         ListNode node3 = new ListNode(2);
         ListNode node2 = new ListNode(2, node3);
         ListNode node1 = new ListNode(1, node2);
-        ListNode listNode = DeleteDuplicates2.deleteDuplicates(node1);
+        ListNode listNode = 删除排序链表中的重复元素2.deleteDuplicates(node1);
         System.out.println(listNode);
     }
 }

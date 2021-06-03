@@ -1,12 +1,12 @@
-package com.lb.leetcode.linkedlist.solution;
+package com.lb.leetcode.链表.solution;
 
-import com.lb.leetcode.linkedlist.ListNode;
+import com.lb.leetcode.链表.ListNode;
 
 /**
  * @author liuben
  * @date 2021/5/31 8:32 下午
  **/
-public class DetectCycle {
+public class 环形链表2_获取入环点 {
 
     public static ListNode detectCycle(ListNode head) {
         if (head == null || head.next == null) {
@@ -38,6 +38,6 @@ public class DetectCycle {
         ListNode node2 = new ListNode(2, node3);
         ListNode node1 = new ListNode(3, node2);
         node4.setNext(node2);
-        DetectCycle.detectCycle(node1);
+        环形链表2_获取入环点.detectCycle(node1);
     }
 }

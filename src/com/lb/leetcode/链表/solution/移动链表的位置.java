@@ -1,6 +1,6 @@
-package com.lb.leetcode.linkedlist.solution;
+package com.lb.leetcode.链表.solution;
 
-import com.lb.leetcode.linkedlist.ListNode;
+import com.lb.leetcode.链表.ListNode;
 //给你一个链表的头节点 head ，旋转链表，将链表每个节点向右移动 k 个位置。
 //
 //
@@ -48,7 +48,7 @@ import com.lb.leetcode.linkedlist.ListNode;
  * @author liuben
  * @date 2021/6/1 10:18 下午
  **/
-public class RotateRight {
+public class 移动链表的位置 {
     public static ListNode rotateRight(ListNode head, int k) {
         if (head == null || head.next == null || k == 0) {
             return head;
@@ -80,7 +80,7 @@ public class RotateRight {
         ListNode node3 = new ListNode(2);
         ListNode node2 = new ListNode(1, node3);
         ListNode node1 = new ListNode(0, node2);
-        ListNode listNode = RotateRight.rotateRight(node1, 7);
+        ListNode listNode = 移动链表的位置.rotateRight(node1, 7);
         System.out.println(listNode);
     }
 }

@@ -1,12 +1,12 @@
-package com.lb.leetcode.linkedlist.solution;
+package com.lb.leetcode.链表.solution;
 
-import com.lb.leetcode.linkedlist.ListNode;
+import com.lb.leetcode.链表.ListNode;
 
 /**
  * @author liuben
  * @date 2021/5/30 12:32 下午
  **/
-public class MergeTwoLists {
+public class 合并两个链表 {
 
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode curr = new ListNode();

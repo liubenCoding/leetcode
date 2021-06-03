@@ -1,6 +1,6 @@
-package com.lb.leetcode.linkedlist.solution;
+package com.lb.leetcode.链表.solution;
 
-import com.lb.leetcode.linkedlist.ListNode;
+import com.lb.leetcode.链表.ListNode;
 
 //编写一个程序，找到两个单链表相交的起始节点。
 //
@@ -61,7 +61,7 @@ import com.lb.leetcode.linkedlist.ListNode;
 //
 // Related Topics 链表
 // 👍 1141 👎 0
-public class IntersectionNode {
+public class 判断链表是否有交点 {
 
     public static ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode l1 = headA;

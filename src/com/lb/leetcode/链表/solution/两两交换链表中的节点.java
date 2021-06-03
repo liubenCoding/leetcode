@@ -1,4 +1,4 @@
-package com.lb.leetcode.linkedlist.solution;
+package com.lb.leetcode.链表.solution;
 
 /**
  * 给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。
@@ -20,10 +20,9 @@ package com.lb.leetcode.linkedlist.solution;
  * 👍 929 👎 0
  */
 
-import com.lb.leetcode.linkedlist.ListNode;
-import sun.java2d.pipe.SpanIterator;
+import com.lb.leetcode.链表.ListNode;
 
-public class SwapPairs {
+public class 两两交换链表中的节点 {
 
     /**
      * 迭代法
@@ -65,7 +64,7 @@ public class SwapPairs {
         ListNode node3 = new ListNode(3, node4);
         ListNode node2 = new ListNode(2, node3);
         ListNode node1 = new ListNode(1, node2);
-        ListNode listNode = SwapPairs.swapPairs(node1);
+        ListNode listNode = 两两交换链表中的节点.swapPairs(node1);
         System.out.println(listNode);
     }
 

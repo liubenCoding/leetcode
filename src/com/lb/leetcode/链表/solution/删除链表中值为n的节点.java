@@ -1,12 +1,12 @@
-package com.lb.leetcode.linkedlist.solution;
+package com.lb.leetcode.链表.solution;
 
-import com.lb.leetcode.linkedlist.ListNode;
+import com.lb.leetcode.链表.ListNode;
 
 /**
  * @author liuben
  * @date 2021/5/31 8:52 下午
  **/
-public class RemoveElements {
+public class 删除链表中值为n的节点 {
 
     public static ListNode removeElements(ListNode head, int val) {
         if (head == null) {

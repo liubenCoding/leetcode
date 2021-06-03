@@ -1,6 +1,6 @@
-package com.lb.leetcode.linkedlist.solution;
+package com.lb.leetcode.链表.solution;
 
-import com.lb.leetcode.linkedlist.ListNode;
+import com.lb.leetcode.链表.ListNode;
 //给你一个链表的头节点 head 和一个特定值 x ，请你对链表进行分隔，使得所有 小于 x 的节点都出现在 大于或等于 x 的节点之前。
 //
 // 你应当 保留 两个分区中每个节点的初始相对位置。
@@ -32,7 +32,7 @@ import com.lb.leetcode.linkedlist.ListNode;
 //
 // Related Topics 链表 双指针
 
-public class Partition {
+public class 分隔链表 {
 
     /**
      * 创建两个链表,一个链表维护 比x小的节点,一个维护比x大的节点
@@ -67,7 +67,7 @@ public class Partition {
         ListNode node3 = new ListNode(3, node4);
         ListNode node2 = new ListNode(4, node3);
         ListNode node1 = new ListNode(1, node2);
-        ListNode listNode = Partition.partition(node1, 3);
+        ListNode listNode = 分隔链表.partition(node1, 3);
         System.out.println(listNode);
     }
 

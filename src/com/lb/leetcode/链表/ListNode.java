@@ -1,4 +1,4 @@
-package com.lb.leetcode.linkedlist;
+package com.lb.leetcode.链表;
 
 /**
  * @author liuben

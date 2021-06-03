@@ -1,4 +1,4 @@
-package com.lb.leetcode.linkedlist.solution;
+package com.lb.leetcode.链表.solution;
 
 //给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。
 //
@@ -43,7 +43,7 @@ package com.lb.leetcode.linkedlist.solution;
 
 //leetcode submit region begin(Prohibit modification and deletion)
 
-import com.lb.leetcode.linkedlist.ListNode;
+import com.lb.leetcode.链表.ListNode;
 
 /**
  * Definition for singly-linked list.
@@ -55,7 +55,7 @@ import com.lb.leetcode.linkedlist.ListNode;
  * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-public class RemoveNthFromEnd {
+public class 删除链表中的某个节点 {
 
     private static int i = 0;
     public static ListNode removeNthFromEnd(ListNode head, int n) {
@@ -75,7 +75,7 @@ public class RemoveNthFromEnd {
         ListNode node3 = new ListNode(3, node4);
         ListNode node2 = new ListNode(2, node3);
         ListNode node1 = new ListNode(1, node2);
-        ListNode listNode = RemoveNthFromEnd.removeNthFromEnd(node1, 2);
+        ListNode listNode = 删除链表中的某个节点.removeNthFromEnd(node1, 2);
         System.out.println(listNode);
     }
 }
