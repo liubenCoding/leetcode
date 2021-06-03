@@ -37,11 +37,23 @@ public class 回文链表 {
             reversedList = latterHalf;
             latterHalf = next;
         }
-        return false;
+
+        ListNode reversedHead = reversedList;
+        while (reversedHead != null) {
+            if (reversedHead.val != dummy.val) {
+                return false;
+            }
+            reversedHead = reversedHead.next;
+            dummy = dummy.next;
+        }
+        return true;
     }
 
     public static void main(String[] args) {
-        ListNode node3 = new ListNode(3);
+        ListNode node6 = new ListNode(1);
+        ListNode node5 = new ListNode(2, node6);
+        ListNode node4 = new ListNode(3, node5);
+        ListNode node3 = new ListNode(3, node4);
         ListNode node2 = new ListNode(2, node3);
         ListNode node1 = new ListNode(1, node2);
         回文链表.isPalindrome(node1);
