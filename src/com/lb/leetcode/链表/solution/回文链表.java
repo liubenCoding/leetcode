@@ -21,32 +21,44 @@ import com.lb.leetcode.链表.ListNode;
 public class 回文链表 {
 
     public static boolean isPalindrome(ListNode head) {
-        ListNode dummy = head;
-        ListNode slow = head;
-        ListNode fast = head;
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-        }
-        ListNode latterHalf = fast == null ? slow : slow.next;
-        ListNode reversedList = null;
-        ListNode next = null;
-        while (latterHalf != null) {
-            next = latterHalf.next;
-            latterHalf.next = reversedList;
-            reversedList = latterHalf;
-            latterHalf = next;
-        }
 
-        ListNode reversedHead = reversedList;
-        while (reversedHead != null) {
-            if (reversedHead.val != dummy.val) {
-                return false;
+        ListNode firstHalfEnd = endOfFirstHalf(head);
+
+        ListNode reversedLatterHalf = reverse(firstHalfEnd.next);
+        ListNode p1 = head;
+        ListNode p2 = reversedLatterHalf;
+        boolean result = true;
+        while (p2 != null) {
+            if (p2.val != p1.val) {
+                result = false;
             }
-            reversedHead = reversedHead.next;
-            dummy = dummy.next;
+            p2 = p2.next;
+            p1 = p1.next;
         }
-        return true;
+        reverse(reversedLatterHalf);
+        return result;
+    }
+
+    private static ListNode endOfFirstHalf(ListNode head) {
+        ListNode fast = head;
+        ListNode slow = head;
+        while (fast.next != null && fast.next.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+
+    public static ListNode reverse(ListNode listNode) {
+        ListNode reversedLatterHalf = null;
+        ListNode next = null;
+        while (listNode != null) {
+            next = listNode.next;
+            listNode.next = reversedLatterHalf;
+            reversedLatterHalf = listNode;
+            listNode = next;
+        }
+        return reversedLatterHalf;
     }
 
     public static void main(String[] args) {
