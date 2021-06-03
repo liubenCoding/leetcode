@@ -21,14 +21,20 @@ import com.lb.leetcode.链表.ListNode;
 public class 回文链表 {
 
     public static boolean isPalindrome(ListNode head) {
-        ListNode slow;
-        ListNode fast;
-        //while (){
-        //
-        //}
+        ListNode dummy = head;
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        ListNode latterHalf = fast == null ? slow : slow.next;
+        while (latterHalf != null) {
+            latterHalf =
+        }
+
         return false;
     }
-
 
     public static void main(String[] args) {
         ListNode node3 = new ListNode(3);
