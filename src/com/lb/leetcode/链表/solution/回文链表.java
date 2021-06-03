@@ -29,10 +29,14 @@ public class 回文链表 {
             fast = fast.next.next;
         }
         ListNode latterHalf = fast == null ? slow : slow.next;
+        ListNode reversedList = null;
+        ListNode next = null;
         while (latterHalf != null) {
-            latterHalf =
+            next = latterHalf.next;
+            latterHalf.next = reversedList;
+            reversedList = latterHalf;
+            latterHalf = next;
         }
-
         return false;
     }
 
