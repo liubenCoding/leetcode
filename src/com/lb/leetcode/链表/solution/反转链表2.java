@@ -76,17 +76,17 @@ public class 反转链表2 {
     //    return dummyNode.next;
     //}
     public static ListNode reverseBetween(ListNode head, int left, int right) {
-        ListNode dummy = new ListNode();
-        dummy.next = head;
-        ListNode curr = dummy;
-        for (int i = 0; i < left; i++) {
-            curr = dummy.next;
-        }
-        ListNode pre = curr.next;
-        for (int i = left; i <= right; i++) {
-
-        }
-
+//        ListNode dummy = new ListNode();
+//        dummy.next = head;
+//        ListNode curr = dummy;
+//        for (int i = 0; i < left; i++) {
+//            curr = dummy.next;
+//        }
+//        ListNode pre = curr.next;
+//        for (int i = left; i <= right; i++) {
+//
+//        }
+        return null;
     }
 
     public static void main(String[] args) {
