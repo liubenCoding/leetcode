@@ -39,13 +39,11 @@ public class 按摩师 {
         int[] res = new int[nums.length];
         res[0] = nums[0];
         res[1] = Math.max(nums[1], nums[0]);
-        res[2] = res[0] + res[2];
-        int max = 0;
+        res[2] = res[0] + nums[2];
         for (int i = 3; i < nums.length; i++) {
-            res[i] = res[i - 2] + nums[i];
-            max = Math.max(max, res[i]);
+            res[i] = Math.max(res[i - 2] + nums[i], res[i-1]);
         }
-        return max;
+        return res[nums.length-1];
     }
 
     public static void main(String[] args) {
