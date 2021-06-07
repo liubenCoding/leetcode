@@ -1,4 +1,4 @@
-package com.lb.leetcode.数组.solution;
+package com.lb.leetcode.数组;
 
 /**
  * @author: liuben
