@@ -21,7 +21,6 @@ public class 爬楼梯 {
         return res;
     }
 
-
     public static void main(String[] args) {
         System.out.println(爬楼梯.climbStairs(3));
     }
