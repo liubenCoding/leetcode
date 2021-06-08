@@ -41,13 +41,13 @@ public class 按摩师 {
         res[1] = Math.max(nums[1], nums[0]);
         res[2] = res[0] + nums[2];
         for (int i = 3; i < nums.length; i++) {
-            res[i] = Math.max(res[i - 2] + nums[i], res[i-1]);
+            res[i] = Math.max(res[i - 2] + nums[i], res[i - 1]);
         }
-        return res[nums.length-1];
+        return res[nums.length - 1];
     }
 
     public static void main(String[] args) {
-        int[] nums = {2,1,4,5,3,1,1,3};
+        int[] nums = {2, 1, 4, 5, 3, 1, 1, 3};
         System.out.println(按摩师.massage(nums));
     }
 
