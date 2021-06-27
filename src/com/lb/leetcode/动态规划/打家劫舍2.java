@@ -39,7 +39,7 @@ public class 打家劫舍2 {
     }
 
     public static void main(String[] args) {
-        int[] nums = {2, 3, 8,2,8, 4};
+        int[] nums = {2, 3, 8, 2, 8, 4};
         打家劫舍2.rob(nums);
     }
 }
