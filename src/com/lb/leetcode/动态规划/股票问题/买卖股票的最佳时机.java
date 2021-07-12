@@ -1,4 +1,4 @@
-package com.lb.leetcode.动态规划;
+package com.lb.leetcode.动态规划.股票问题;
 
 /**
  * @author: liuben
