@@ -1,7 +1,5 @@
 package com.lb.leetcode.动态规划;
 
-import java.util.Arrays;
-
 /**
  * @author liuben
  * @date 2021/6/14 5:59 下午
@@ -9,13 +7,7 @@ import java.util.Arrays;
 public class 打家劫舍2 {
 
     /**
-     * 1.dp数组定义 ： dp[i]： 当选择第i的数时，所偷窃到的最大金额
-     * 2. 状态转移方程 ：
-     * 选第i个数时,那么i-1个数肯定不能选, dp[i] + dp[i-2]
-     * 不选第i个数,那么当前最大金额为 dp[i-1]
-     * 所以方程为 dp[i] = max(dp[i] + dp[i-2],dp[i-1])
-     * 3. dp数组初始化：dp[0] = 0,dp[1] = 1
-     * 4. 遍历方式，正序遍历
+     * 首尾都不取，肯定小于只取首或者只取尾的队列
      */
     public static int rob(int[] nums) {
         int length = nums.length;
@@ -32,7 +24,6 @@ public class 打家劫舍2 {
         for (int i = start + 2; i <= end; i++) {
             int temp = second;
             second = Math.max(first + nums[i], second);
-            System.out.println(second);
             first = temp;
         }
         return second;
