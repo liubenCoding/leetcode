@@ -25,5 +25,6 @@ public class 二四二$字母异位词 {
     public static void main(String[] args) {
         String  s = "anagram", t = "nagaram";
         System.out.println(isAnagram(s,t));
+        System.out.println('c' - 'a');
     }
 }
