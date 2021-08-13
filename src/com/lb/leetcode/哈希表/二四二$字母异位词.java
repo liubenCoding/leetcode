@@ -1,4 +1,4 @@
-package com.lb.leetcode.数组;
+package com.lb.leetcode.哈希表;
 
 /**
  * @author: liuben
