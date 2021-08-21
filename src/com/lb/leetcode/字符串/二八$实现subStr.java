@@ -47,7 +47,6 @@ public class 二八$实现subStr {
     public static void main(String[] args) {
         System.out.println(二八$实现subStr.strStr("hello", "ll"));
         System.out.println(二八$实现subStr.strStr("aaaaa", "bba"));
-
     }
 }
 
